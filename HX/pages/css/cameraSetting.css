@@ -1,0 +1,232 @@
+.button-div {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-top: 20px
+}
+
+.col {
+    width: 50px
+}
+
+.btn,
+.dropdown {
+    background-color: var(--bs-body-bg)
+}
+.dropdown1 {
+    background-color: var(--bs-body-bg);
+    flex: 1; /* 每个dropdown占据相同的空间 */
+}
+
+.artifact_view {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* 添加平滑过渡效果 */
+}
+
+
+.dropdown-camera,
+.nav-item {
+    border: 1px solid #a9a9a9
+}
+
+.out-frame {
+    width: 1100px;
+    height: 800px;
+    border: 2px solid #000;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.center-div {
+    border: 1px solid #a9a9a9;
+    width: 92%;
+    height: 660px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    position: relative
+}
+
+.navbar {
+    margin-left: auto;
+    margin-right: auto;
+    width: 92%
+}
+
+.center-left-div {
+    border: 1px solid #a9a9a9;
+    width: 70%;
+    height: 95%;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.center-right-div {
+    border: 1px solid #a9a9a9;
+    width: 25%;
+    height: 95%;
+    margin-right: auto;
+    padding-top: 5px
+}
+
+.Camera.Settings {
+    width: 95%;
+    height: 7%;
+    margin-left: auto;
+    margin-right: auto
+}
+.Camera.Direction.Settings{
+    width: 95%;
+    height: 7%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; /* 使用flex布局 */
+    justify-content: space-between; /* 子元素之间的间距平均分布 */
+}
+.camera_params {
+    width: 50%
+}
+
+.brightness {
+    width: 74%
+}
+
+.center-div-top {
+    height: 10%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex
+}
+
+.center-div-platform {
+    border: 1px solid #a9a9a9;
+    width: 92%;
+    height: 660px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    position: relative
+}
+
+.center-div-other {
+    height: 30%;
+    width: 100%;
+    border: 1px solid #a9a9a9;
+    display: flex;
+    flex-direction: column
+}
+
+.center-div-top-1 {
+    width: 15%;
+    height: 70%;
+    margin-top: 8px
+}
+
+.center-div-top-2 {
+    width: 35%;
+    height: 100%
+}
+
+.center-div-other-first-top {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.center-div-other-first-bottom {
+    width: 100%;
+    height: 40%;
+    display: flex
+}
+
+.center-div-other-first-bottom-1 {
+    width: 15%;
+    height: 70%;
+    margin-top: 7px
+}
+
+.center-div-other-first-bottom-2 {
+    width: 18%;
+    height: 100%
+}
+
+.nav {
+    margin-left: 44px;
+    margin-top: 20px
+}
+
+.center-div-other-first-bottom-3 {
+    width: 20%;
+    height: 70%;
+    margin-top: 7px
+}
+
+.center-div-other-first-bottom-4 {
+    width: 13%;
+    height: 100%
+}
+
+.text {
+    width: 95%
+}
+
+.form-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5px;
+    height: 15px;
+    background-color: #007bff;
+    border-radius: 0;
+    cursor: pointer
+}
+
+.button-sub {
+    background-color: #f8f9fa;
+    border: 1px solid;
+    color: var(--bs-emphasis-color);
+    font-size: 25px;
+    width: 20px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 180px;
+    margin-top: -35px
+}
+
+.button-add {
+    background-color: #f8f9fa;
+    border: 1px solid;
+    color: var(--bs-emphasis-color);
+    font-size: 25px;
+    width: 20px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 210px;
+    margin-top: -25px
+}
+
+.contrast {
+    width: 41.5%
+}
+
+.photography.delay1 {
+    width: 60%
+}
+
+.photography.delay {
+    width: 58%
+}

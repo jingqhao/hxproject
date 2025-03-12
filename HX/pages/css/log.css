@@ -1,0 +1,55 @@
+#central_content {
+  width: 880px;
+  height: 400px;
+  margin-top: 20px;
+  overflow-y: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+#bottom_meau {
+  width: 880px;
+  height: 80px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: row;
+}
+
+#container {
+  width: 880px;
+  height: 500px;
+}
+
+#stop_update {
+  width: 120px;
+  height: 50px;
+  display: flex;
+  justify-content: initial;
+  align-items: center;
+  flex-direction: row;
+  font-size: large;
+  margin-right: 20px;
+}
+
+#clear {
+  width: 100px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+#export {
+  width: 100px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+#bottom_meau button {
+  width: 100px;
+  height: 50px;
+  background-color: gray;
+  color: black;
+  font-size: large;
+}
+

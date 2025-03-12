@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';img-src 'self' data: base64; connect-src 'self' ws://localhost:9999; style-src 'self' 'unsafe-inline'; child-src 'none';"/>
+    <title>相机参数设置</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/cameraSetting.css">
+</head>
+
+<body>
+    <div class="out-frame" style="width: 1300;height: 550;">
+        <div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-bs-toggle="tab"
+                        href="#tab-1">工件视图</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="tab"
+                        href="#tab-3">目标视图</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="tab"
+                        href="#tab-5">平台类型</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" role="tabpanel" id="tab-1">
+                    <div class="center-div">
+                            <div class="center-left-div" id="artifact_view"></div>
+                            <!-- <img id="image" src="F:\project\hxProject_final\HX\pages\18DECF8F2E42665DA4299876B981726A16066360.jpg" alt="Sample Image" /> -->
+                        <div class="center-right-div">
+                            <div class="Camera Settings"><label class="form-label fs-5">相机选择</label></div>
+                            <div class="Camera Settings">
+                                <div class="dropdown"><button
+                                        class="btn btn-primary dropdown-toggle text-bg-light dropdown-camera"
+                                        aria-expanded="false" data-bs-toggle="dropdown" type="button" id="choiceCameras">相机一</button>
+                                    <!-- <div class="dropdown-menu"><a class="dropdown-item" href="#">相机一</a><a
+                                            class="dropdown-item" href="#">相机二</a><a class="dropdown-item"
+                                            href="#">相机三</a></div> -->
+                                    <div class="dropdown-menu" id="dropdownMenu">
+                                                <!-- 动态生成选项 -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Camera Settings"><label class="form-label fs-5">当前状态</label></div>
+                            <div class="Camera Settings"><input type="text"></div>
+                            <div class="Camera Settings"><label class="form-label fs-5">图像旋转</label></div>
+                            <div class="Camera Direction Settings">
+                                <div class="dropdown1">
+                                    <button class="btn btn-primary dropdown-toggle text-bg-light dropdown-camera"
+                                     aria-expanded="false" data-bs-toggle="dropdown" type="button" id="RotateREBtn">未旋转</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">0°</a>
+                                        <a class="dropdown-item" href="#">90°</a>
+                                        <a class="dropdown-item" href="#">180°</a>
+                                        <a class="dropdown-item" href="#">270°</a>
+                                        <a class="dropdown-item" href="#">0°+水平镜像</a>
+                                        <a class="dropdown-item" href="#">0°+垂直镜像</a>
+                                        <a class="dropdown-item" href="#">旋转90°+水平镜像</a>
+                                        <a class="dropdown-item" href="#">旋转90°+垂直镜像</a>
+                                    </div>
+                                </div>
+                                <!-- <div class="dropdown1">
+                                    <button class="btn btn-primary dropdown-toggle text-bg-light dropdown-camera"
+                                     aria-expanded="false" data-bs-toggle="dropdown" type="button" id="FlipREBtn">未翻转</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">未翻转</a>
+                                        <a class="dropdown-item" href="#">水平翻转</a>
+                                        <a class="dropdown-item" href="#">竖直翻转</a>
+                                        <a class="dropdown-item" href="#">水平且竖直翻转</a>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="Camera Settings"><label class="form-label fs-5">曝光:&nbsp;&nbsp;</label><input
+                                    type="text" class="camera_params" id="exposure"><button class="btn btn-primary button-sub"
+                                    type="button">-</button><button class="btn btn-primary button-add"
+                                    type="button">+</button></div>
+                            <div class="Camera Settings"><input class="form-range" type="range" min="8" max="100000" step="1" value="8"></div>
+                            <div class="Camera Settings"><label class="form-label fs-5">亮度:&nbsp;&nbsp;</label><input
+                                    type="text" class="camera_params" id="brightness"><button class="btn btn-primary button-sub"
+                                    type="button">-</button><button class="btn btn-primary button-add"
+                                    type="button">+</button></div>
+                            <div class="Camera Settings"><input class="form-range" type="range"></div>
+                            <div class="Camera Settings"><label class="form-label fs-5">对比度:&nbsp;&nbsp;</label><input
+                                    type="text" class="contrast" id="contrast"><button class="btn btn-primary button-sub"
+                                    type="button">-</button><button class="btn btn-primary button-add"
+                                    type="button">+</button></div>
+                            <div class="Camera Settings"><input class="form-range" type="range"></div>
+                            <div class="Camera Settings"><label class="form-label fs-5">拍照延时:&nbsp;&nbsp;</label><input
+                                    type="text" class="photography delay"></div>
+                            <div class="Camera Settings"><label class="form-label fs-5">PLC绑定:&nbsp;&nbsp;</label><input
+                                    type="text" class="photography delay1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="tab-3">
+                    <div class="center-div">
+                        <div class="center-left-div"></div>
+                        <div class="center-right-div">
+                            <div class="Camera Settings"><label class="form-label fs-5">相机选择</label></div>
+                            <div class="Camera Settings">
+                                <div class="dropdown"><button
+                                        class="btn btn-primary dropdown-toggle text-bg-light dropdown-camera"
+                                        aria-expanded="false" data-bs-toggle="dropdown" type="button">相机一&nbsp; &nbsp;
+                                        &nbsp; &nbsp;</button>
+                                    <div class="dropdown-menu"><a class="dropdown-item" href="#">相机一</a><a
+                                            class="dropdown-item" href="#">相机二</a><a class="dropdown-item"
+                                            href="#">相机三</a></div>
+                                </div>
+                            </div>
+                            <div class="Camera Settings"><label class="form-label fs-5">当前状态</label></div>
+                            <div class="Camera Settings"><input type="text"></div>
+                            <div class="Camera Settings"><label class="form-label fs-5">图像旋转:&nbsp;&nbsp;</label></div>
+                            <div class="Camera Settings"><input type="text"></div>
+                            <div class="Camera Settings"><label class="form-label fs-5">曝光:&nbsp;&nbsp;</label><input
+                                    type="text" class="exposure"><button class="btn btn-primary button-sub"
+                                    type="button">-</button><button class="btn btn-primary button-add"
+                                    type="button">+</button></div>
+                            <div class="Camera Settings"><input class="form-range" type="range"></div>
+                            <div class="Camera Settings"><label class="form-label fs-5">亮度:&nbsp;&nbsp;</label><input
+                                    type="text" class="exposure"><button class="btn btn-primary button-sub"
+                                    type="button">-</button><button class="btn btn-primary button-add"
+                                    type="button">+</button></div>
+                            <div class="Camera Settings"><input class="form-range" type="range"></div>
+                            <div class="Camera Settings"><label class="form-label fs-5">对比度:&nbsp;&nbsp;</label><input
+                                    type="text" class="contrastratio"><button class="btn btn-primary button-sub"
+                                    type="button">-</button><button class="btn btn-primary button-add"
+                                    type="button">+</button></div>
+                            <div class="Camera Settings"><input class="form-range" type="range"></div>
+                            <div class="Camera Settings"><label class="form-label fs-5">拍照延时:&nbsp;&nbsp;</label><input
+                                    type="text" class="photography delay"></div>
+                            <div class="Camera Settings"><label class="form-label fs-5">PLC绑定:&nbsp;&nbsp;</label><input
+                                    type="text" class="photography delay1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="tab-5">
+                    <div class="center-div-platform">
+                        <div class="center-div-top">
+                            <div class="center-div-top-1"><label class="form-label">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    &nbsp; &nbsp; &nbsp;平台类型</label></div>
+                            <div class="center-div-top-2">
+                                <div class="dropdown"><button
+                                        class="btn btn-primary dropdown-toggle text-bg-light dropdown-camera"
+                                        aria-expanded="false" data-bs-toggle="dropdown" type="button">XY0平台&nbsp; &nbsp;
+                                        &nbsp; &nbsp;</button>
+                                    <div class="dropdown-menu"><a class="dropdown-item" href="#">相机一</a><a
+                                            class="dropdown-item" href="#">相机二</a><a class="dropdown-item"
+                                            href="#">相机三</a></div>
+                                </div>
+                            </div>
+                            <div class="center-div-top-1"><label class="form-label">平台坐标数据类型</label></div>
+                            <div class="center-div-top-2">
+                                <div class="dropdown"><button
+                                        class="btn btn-primary dropdown-toggle text-bg-light dropdown-camera"
+                                        aria-expanded="false" data-bs-toggle="dropdown" type="button">毫米模式&nbsp; &nbsp;
+                                        &nbsp; &nbsp;</button>
+                                    <div class="dropdown-menu"><a class="dropdown-item" href="#">相机一</a><a
+                                            class="dropdown-item" href="#">相机二</a><a class="dropdown-item"
+                                            href="#">相机三</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="center-div-other">
+                            <div class="center-div-other-first-top"><label
+                                    class="form-label center-div-other-first-top-label">平台通用参数</label></div>
+                            <div class="center-div-other-first-bottom">
+                                <div class="center-div-other-first-bottom-1"><label class="form-label">&nbsp; &nbsp;
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;X轴方向</label></div>
+                                <div class="center-div-other-first-bottom-2">
+                                    <div class="dropdown"><button
+                                            class="btn btn-primary dropdown-toggle text-bg-light dropdown-camera"
+                                            aria-expanded="false" data-bs-toggle="dropdown" type="button">向左&nbsp;
+                                            &nbsp; &nbsp; &nbsp;</button>
+                                        <div class="dropdown-menu"><a class="dropdown-item" href="#">相机一</a><a
+                                                class="dropdown-item" href="#">相机二</a><a class="dropdown-item"
+                                                href="#">相机三</a></div>
+                                    </div>
+                                </div>
+                                <div class="center-div-other-first-bottom-1"><label class="form-label">&nbsp; &nbsp;
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Y轴方向</label></div>
+                                <div class="center-div-other-first-bottom-2">
+                                    <div class="dropdown"><button
+                                            class="btn btn-primary dropdown-toggle text-bg-light dropdown-camera"
+                                            aria-expanded="false" data-bs-toggle="dropdown" type="button">向下&nbsp;
+                                            &nbsp; &nbsp; &nbsp;</button>
+                                        <div class="dropdown-menu"><a class="dropdown-item" href="#">相机一</a><a
+                                                class="dropdown-item" href="#">相机二</a><a class="dropdown-item"
+                                                href="#">相机三</a></div>
+                                    </div>
+                                </div>
+                                <div class="center-div-other-first-bottom-1"><label class="form-label">&nbsp; &nbsp;
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;θ轴方向</label></div>
+                                <div class="center-div-other-first-bottom-2">
+                                    <div class="dropdown"><button
+                                            class="btn btn-primary dropdown-toggle text-bg-light dropdown-camera"
+                                            aria-expanded="false" data-bs-toggle="dropdown" type="button">逆时针&nbsp;
+                                            &nbsp; &nbsp; &nbsp;</button>
+                                        <div class="dropdown-menu"><a class="dropdown-item" href="#">相机一</a><a
+                                                class="dropdown-item" href="#">相机二</a><a class="dropdown-item"
+                                                href="#">相机三</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="center-div-other-first-bottom">
+                                <div class="center-div-other-first-bottom-3"><label class="form-label">&nbsp; &nbsp;
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;X轴脉冲转换比例</label></div>
+                                <div class="center-div-other-first-bottom-4"><input type="text" class="text"></div>
+                                <div class="center-div-other-first-bottom-3"><label class="form-label">&nbsp; &nbsp;
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Y轴脉冲转换比例</label></div>
+                                <div class="center-div-other-first-bottom-4"><input type="text" class="text"></div>
+                                <div class="center-div-other-first-bottom-3"><label class="form-label">&nbsp; &nbsp;
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;θ轴脉冲转换比例</label></div>
+                                <div class="center-div-other-first-bottom-4"><input type="text" class="text"></div>
+                            </div>
+                        </div>
+                        <div class="center-div-other">
+                            <div class="center-div-other-first-top"><label
+                                    class="form-label center-div-other-first-top-label">平台特殊参数</label></div>
+                        </div>
+                        <div class="center-div-other">
+                            <div class="center-div-other-first-top"><label
+                                    class="form-label center-div-other-first-top-label">XQQ参数设定</label></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button-div">
+            <div class="col-xxl-1">
+                <div class="dropdown"><button class="btn btn-primary dropdown-toggle text-bg-light"
+                        aria-expanded="false" data-bs-toggle="dropdown" type="button">对位系统 #1&nbsp; &nbsp; &nbsp;
+                        &nbsp;</button>
+                    <div class="dropdown-menu"><a class="dropdown-item" href="#">对位系统 #1</a><a class="dropdown-item"
+                            href="#">对位系统 #2</a><a class="dropdown-item" href="#">对位系统 #3</a></div>
+                </div>
+            </div><button class="btn btn-primary text-bg-light" type="button">更改名字</button><button
+                class="btn btn-primary text-bg-light" type="button">恢复默认设置</button><button
+                class="btn btn-primary text-bg-light" id="saveDataBtn"  type="button">保存默认设置</button><button
+                class="btn btn-primary text-bg-light" type="button">确定</button><button
+                class="btn btn-primary text-bg-light" type="button">取消</button>
+        </div>
+    </div>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="./render.js"></script> -->
+    <script src="./js/cameraSetting.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+.table .parameters_tag {
+  font-weight: bold;
+  background: #b2bdf2;
+}
+
+#solder_body {
+  width: 1265px;
+  height: 790px;
+}
+
+#container {
+  width: 1265px;
+  height: 790px;
+  display: flex;
+  margin-top: 20px;
+}
+
+#left_content {
+  width: 200px;
+  height: 720px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+  border-style: none;
+  border-bottom-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+#center_content {
+  width: 600px;
+  height: 600px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-style: none;
+}
+
+#right_content {
+  width: 400px;
+  height: 720px;
+  overflow-y: auto;
+  border-style: none;
+}
+
+#left_content ul {
+  list-style-type: none;
+  margin-bottom: 5px;
+  padding-left: 0px;
+  width: 200px;
+  height: 650px;
+  overflow-y: auto;
+  border: 1px solid rgb(163,175,187);
+}
+
+#left_content ul li {
+  margin-top: 0px;
+  height: 30px;
+  padding-left: 10px;
+  border-bottom: 1px solid rgb(163,175,187);
+}
+
+.view_content {
+  width: 700px;
+  height: 360px;
+}
+
+.view_content_pic {
+  width: 500px;
+  height: 299px;
+  border-style: solid;
+  margin: auto;
+}
+
+#product_paramters_title {
+  background: #b2bdf2;
+  width: 370px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+}
+
+#product_name {
+  width: 240px;
+  height: 38px;
+  line-height: 40px;
+}
+
+#product_info {
+  width: 370px;
+  height: 45px;
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+  border-style: none;
+  margin-bottom: 5px;
+}
+
+#camera_switch {
+  width: 200px;
+  height: 45px;
+  margin-top: 10px;
+}
+
+
+#camera_switch {
+  display: flex; /* 使用Flexbox布局 */
+  align-items: center; /* 垂直居中对齐 */
+}
+
+#camera_switch select,
+#camera_switch button {
+  margin-right: 10px; /* 添加右边距 */
+  width: 100px;
+  height: 45px;
+}
+
+/* 如果你想要去掉按钮的右边距，可以给最后一个元素添加这个样式 */
+#camera_switch > *:last-child {
+  margin-right: 0;
+}
+
+select option {
+  text-align: center;
+}
+
+/* 数字键盘按钮样式 */
+#keyboard button {
+  padding: 10px;
+  margin: 2px;
+  border: 1px solid #ddd;
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+
+#keyboard button:hover {
+  background-color: #eaeaea;
+}
+
+/* 可编辑的 td 元素样式 */
+.editable {
+  border: 1px solid #000;
+  padding: 5px;
+  width: 122px;
+  text-align: center;
+}
+
+/* 当 td 元素被编辑时的样式 */
+.editable:focus {
+  outline: none;
+  background-color: #ffff99;
+}
+#keyboard .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+#keyboard {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 30%;
+  width: 30%;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#keyboard .row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#keyboard button {
+  background-color: #808080; /* 灰色背景 */
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  flex: 1; /* 使按钮具有弹性，根据容器宽度自动调整 */
+  max-width: calc(33% - 4px); /* 减去margin的宽度，确保三个按钮能够一行显示 */
+}

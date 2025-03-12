@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';img-src 'self' data: base64; connect-src 'self' ws://localhost:9999; style-src 'self' 'unsafe-inline'; child-src 'none';"/>
+    <title>模板设置</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style_design.css">
+   
+</head>
+
+<body id="solder_body">
+    <div id="container">
+        <div id="left_content">
+            <ul id="PeifangList">
+                <!-- <li><span style="margin-right: 5px;">001 |</span><span>--------------------</span></li> -->
+            </ul>
+            <div id="camera_switch">
+                <select style="width: 100px;height: 45px;">
+                    <option value="camera1" selected="">进料相机</option>
+                    <option value="camera2">对位相机1</option>
+                    <option value="camera3">对位相机2</option>
+                </select>
+            
+                <button id="add_new_peifang" style="width: 100px;height: 45px;">新增配方</button>
+            </div>
+               <!-- <div ></div> -->
+
+        </div>
+        <div id="center_content">
+            <div class="view_content">
+                <p style="text-align: center;">工件视图</p>
+                <div class="view_content_pic" id="workpiece_view">
+                    
+
+                </div>
+            </div>
+            <div class="view_content">
+                <p style="text-align: center;">目标视图</p>
+                <div class="view_content_pic" id="target_view"></div>
+            </div>
+        </div>
+        <div id="right_content">
+            <h1 id="product_paramters_title">产品种类参数</h1>
+            <div id="product_info"><span style="height: 40px;line-height:40px">名称：</span><input type="text" id="product_name"><span style="width: 15px;">&nbsp;</span><button  id="modify" class="btn btn-primary" type="button" style="width: 60px;height: 40px;background: rgb(73,109,201);">确认</button></div>
+            <div class="table-responsive" style="width: 370px;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th style="background: #b2bdf2;" colspan="2">对位参数</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>对位类型</td>
+                            <td id="point_to_point">点对位</td>
+                        </tr>
+                        <tr>
+                            <td>最大对位次数</td>
+                            <td  id="max-pairs">10</td>
+                        </tr>
+                        <tr>
+                            <td class="parameters_tag" colspan="2">对位精度</td>
+                        </tr>
+                        <tr>
+                            <td>X轴方向(mm)</td>
+                            <td id="alignment_accuracy_x">0.1</td>
+                        </tr>
+                        <tr>
+                            <td>Y轴方向(mm)</td>
+                            <td id="alignment_accuracy_y">0.1</td>
+                        </tr>
+                        <tr>
+                            <td>θ轴方向(度)</td>
+                            <td id="alignment_accuracy_θ">0.25</td>
+                        </tr>
+                        <tr>
+                            <td class="parameters_tag" colspan="2">目标补偿</td>
+                        </tr>
+                        <tr>
+                            <td>X轴方向(mm)</td>
+                            <td id="target_compensation_x">0.1</td>
+                        </tr>
+                        <tr>
+                            <td>Y轴方向(mm)</td>
+                            <td id="target_compensation_y">0.1</td>
+                        </tr>
+                        <tr>
+                            <td>θ轴方向(度)</td>
+                            <td id="target_compensation_θ">0.25</td>
+                        </tr>
+                        <tr>
+                            <td class="parameters_tag" colspan="2">最大移动量</td>
+                        </tr>
+                        <tr>
+                            <td>限制最大移动量</td>
+                            <td id="limit_max_move_num">否</td>
+                        </tr>
+                        <tr>
+                            <td>限制轴移动量</td>
+                            <td id="limit_axis_move">否</td>
+                        </tr>
+                        <tr>
+                            <td>X轴方向(mm)</td>
+                            <td id="max_move_x">2</td>
+                        </tr>
+                        <tr>
+                            <td>Y轴方向(mm)</td>
+                            <td id="max_move_y">2</td>
+                        </tr>
+                        <tr>
+                            <td>θ轴方向(度)</td>
+                            <td id="max_move_θ">2</td>
+                        </tr>
+                        <tr>
+                            <td class="parameters_tag" colspan="2">出料补偿大小</td>
+                        </tr>
+                        <tr>
+                            <td>X轴方向(mm)</td>
+                            <td id="feed_compensation_x">0</td>
+                        </tr>
+                        <tr>
+                            <td>Y轴方向(mm)</td>
+                            <td  id="feed_compensation_y">0</td>
+                        </tr>
+                        <tr>
+                            <td>θ轴方向(度)</td>
+                            <td  id="feed_compensation_θ">0</td>
+                        </tr>
+                        <tr>
+                            <td class="parameters_tag" colspan="2">方向取反</td>
+                        </tr>
+                        <tr>
+                            <td>X轴方向取反</td>
+                            <td id="x_axis_direction">否</td>
+                        </tr>
+                        <tr>
+                            <td>X轴方向取反</td>
+                            <td id="y_axis_direction">否</td>
+                        </tr>
+                        <tr>
+                            <td>Q轴方向取反</td>
+                            <td id="q_axis_direction">否</td>
+                        </tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <div id="keyboard" style="display: none; position: fixed; bottom: 0; left: 0; height: 35%; width: 30%; background: #fff; padding: 10px; box-shadow: 0 -2px 5px rgba(0,0,0,0.2);">
+            <div class="row">
+                <button id="num1">1</button>
+                <button id="num2">2</button>
+                <button id="num3">3</button>
+            </div>
+            <div class="row">
+                <button id="num4">4</button>
+                <button id="num5">5</button>
+                <button id="num6">6</button>
+            </div>
+            <div class="row">
+                <button id="num7">7</button>
+                <button id="num8">8</button>
+                <button id="num9">9</button>
+            </div>
+            <div class="row">
+                <button id="num0">0</button>
+                <button id="dot">.</button>
+                <button id="minus_sign">-</button>
+            </div>
+            <div class="row">
+                <button id="clear">clear</button>
+                <button id="del">Del</button>
+                <button id="Enter">Enter</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/style_design.js"></script>
+</body>
+</html>

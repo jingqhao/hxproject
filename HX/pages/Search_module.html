@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self';img-src 'self' data: base64; connect-src 'self' ws://localhost:9999; style-src 'self' 'unsafe-inline'; child-src 'none';"/>
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/Search_module.css">
+</head>
+
+<body>
+  <div id="search_module">
+    <div id="photo_part">
+      <canvas id="photoCanvas" style="width: 640px; height: 640px;" ></canvas> <!-- 主画布 -->
+    </div>
+
+    <div id="function_part">
+      <div id="top_but">
+        <ul>
+          <li><button id="load_img">导入图像</button></li>
+          <li><button id="load_img_from_Camera">采集图像</button></li>
+          <li><button id="update_img">更新图像</button></li>
+        </ul>
+      </div>
+      <div id="oriDraw_but">
+        <div id="left">
+          <input type="checkbox" name="" id="">
+          <span>全图搜索</span>
+        </div>
+        <div id="right">
+          <input type="checkbox" name="" id="">
+          <span>行</span>
+          <input type="checkbox" name="" id="">
+          <span>列</span>
+        </div>
+
+      </div>
+      <div id="image_part">
+        <canvas id="imageCanvas" style="width: 340px; height: 340px;" ></canvas> <!-- 子画布 -->
+      </div>
+      <div id="mid_but">
+        <ul>
+          <li><button id="draw_point">绘制参考点</button></li>
+          <li><button id="clear_point">清除参考点</button></li>
+          <li><button id="confirm_point">确认</button></li>
+        </ul>
+      </div>
+      <div id="bottomFunction">
+        <div id="left_box">
+          <div id="search"><span>搜索方式</span></div>
+          <div id="score"><span>得分阈值</span></div>
+          <div id="angle"><span>角度范围</span></div>
+          <div id="tier"><span>层级</span></div>
+          <div id="step"><span>步距角</span></div>
+        </div>
+        <div id="right_box">
+          <div id="search"><select id="location" name="location">
+              <option value="灰度定位1">灰度定位1</option>
+              <option value="灰度定位2">灰度定位2</option>
+            </select></div>
+          <div id="score"><input id="score_value" type="text" value="65"></div>
+          <div id="angle"><input id="min_angle" type="text" value="-25"><input id="max_angle"type="text" value="25" class="right"></div>
+          <div id="tier"><select id="tiers" name="tiers">
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select></div>
+          <div id="step"><select id="steps" name="steps">
+              <option value="0.0175">0.0175</option>
+              <option value="0.0176">0.0176</option>
+            </select></div>
+        </div>
+      </div>
+      <div id="bottom_but">
+        <button id="save_parameter">保存并退出</button>
+      </div>
+
+    </div>
+
+    <div id="button_part">
+      <ul>
+        <li><button id="img_save">图像保存</button></li>
+        <li><button id="draw_roi">画ROI区域</button></li>
+        <li><button id="draw_mark">画Mark区域</button></li>
+        <li><button id="clear_roi">清除ROI</button></li>
+        <li><button id="clear_mark">清除Mark</button></li>
+        <li><button id="comfirm_roi_mark">确认</button></li>
+        <!-- <li><button>1：1</button></li>
+        <li><button>1：2</button></li> -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="./js/Search_module.js"></script>
+</body>
+
+</html>

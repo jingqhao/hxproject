@@ -1,0 +1,47 @@
+{
+  "name": "hx",
+  "version": "1.0.0",
+  "description": "Automated soldering machine vision software",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "UVP",
+    "win": {
+      "icon": "./logo.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "author": "lycode",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^32.1.2",
+    "electron-builder": "^25.0.5",
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reinchow/hxProject_final.git"
+  },
+  "bugs": {
+    "url": "https://github.com/reinchow/hxProject_final/issues"
+  },
+  "homepage": "https://github.com/reinchow/hxProject_final#readme"
+}

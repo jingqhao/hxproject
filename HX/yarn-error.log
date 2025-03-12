@@ -1,0 +1,76 @@
+Arguments: 
+  D:\nodejs\node.exe D:\yarn\bin\yarn.js add sharp
+
+PATH: 
+  D:\HuarayTech\MV Viewer\Runtime\x64\;D:\HuarayTech\MV Viewer\Runtime\Win32\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\database\product\11.2.0\dbhome_1\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_74\bin;C:\Program Files\Java\jdk1.8.0_74\lib;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\AndroidSDK\platform-tools;D:\AndroidSDK\emulator;D:\AndroidSDK\tools;D:\AndroidSDK\tools\bin;D:\yarn\bin\;D:\nodejs\gradle-6.2\bin;D:\apache-maven-3.6.1\bin;D:\apktool;F:\Work\mysql-8.0.21\mysql-8.0.21-winx64\bin;D:\xftp 7\;C:\Program Files (x86)\PuTTY\;C:\Program Files\dotnet\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;D:\nodejs\;D:\nodejs\node_global\node_modules;D:\HuarayTech\MV Viewer\Runtime\x64;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;D:\QT\Qt5.11.1\5.11.1\mingw53_32\bin;D:\visual studio\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\bin\Hostx64\x64;D:\python\python3.12\Scripts\;D:\python\python3.12\;C:\Users\11033\AppData\Local\Programs\Python\Launcher\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\11033\AppData\Local\Microsoft\WindowsApps;C:\wamp\bin\mysql\mysql5.1.32\bin;D:\VS\Microsoft VS Code\bin;D:\Git\bin;D:\Git\mingw64\libexec\git-core;D:\Git\mingw64\bin;C:\Users\11033\AppData\Local\Yarn\bin;C:\Users\11033\AppData\Local\GitHubDesktop\bin;D:\Xshell 7;D:\PyCharm\PyCharm Community Edition 2024.1\bin;;D:\nodejs\node_global;D:\QT\Qt5.11.1\5.11.1\mingw53_32\bin;D:\visual studio\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\bin\Hostx64\x64;D:\runtime\MinGW\bin;D:\Anaconda\anaconda;D:\Anaconda\anaconda\Library\mingw-w64\bin;D:\Anaconda\anaconda\Library\usr\bin;D:\Anaconda\anaconda\Scripts;D:\Anaconda\anaconda\Library\bin;
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  18.19.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: certificate has expired
+      at TLSSocket.onConnectSecure (node:_tls_wrap:1659:34)
+      at TLSSocket.emit (node:events:517:28)
+      at TLSSocket._finishInit (node:_tls_wrap:1070:8)
+      at ssl.onhandshakedone (node:_tls_wrap:856:12)
+
+npm manifest: 
+  {
+    "name": "hx",
+    "version": "1.0.0",
+    "description": "Automated soldering machine vision software",
+    "main": "index.js",
+    "scripts": {
+      "start": "electron .",
+      "build": "electron-builder"
+    },
+    "build": {
+      "appId": "UVP",
+      "win": {
+        "icon": "./logo.ico",
+        "target": [
+          {
+            "target": "nsis",
+            "arch": [
+              "x64"
+            ]
+          }
+        ]
+      },
+      "nsis": {
+        "oneClick": false,
+        "perMachine": true,
+        "allowToChangeInstallationDirectory": true
+      }
+    },
+    "author": "lycode",
+    "license": "ISC",
+    "devDependencies": {
+      "electron": "^32.1.2",
+      "electron-builder": "^25.0.5",
+      "nodemon": "^3.1.7"
+    },
+    "dependencies": {
+      "sharp": "^0.33.5"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/reinchow/hxProject_final.git"
+    },
+    "bugs": {
+      "url": "https://github.com/reinchow/hxProject_final/issues"
+    },
+    "homepage": "https://github.com/reinchow/hxProject_final#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

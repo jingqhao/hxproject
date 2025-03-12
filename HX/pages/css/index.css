@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    width: 1260px;
+    height: 800px;
+    border: 1px solid black;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+#content #top_content {
+    width: 1260px;
+    height: 550px;
+    /* margin-bottom: 20px; */
+}
+
+#content #top_content ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1260px;
+    height: 550px;
+}
+
+#content #top_content ul li {
+    width: 400px;
+    height: 260px;
+    background-color: gray;
+    list-style: none;
+}
+
+#content #buttom_content {
+    width: 1260px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#content #buttom_content #b_left {
+    width: 340px;
+    height: 234px;
+}
+
+#content #buttom_content #b_left ul {
+    width: 340px;
+    height: 234px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#content #buttom_content #b_left ul li {
+    list-style: none;
+    width: 150px;
+    height: 65px;
+}
+
+#content #buttom_content #b_left ul li button {
+    font-size: x-large;
+    width: 150px;
+    height: 65px;
+    line-height: 60px;
+    border: none;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+#content #buttom_content #b_left ul li button:hover {
+    background-color: gray;
+}
+
+#content #buttom_content #b_center {
+    width: 460px;
+    height: 234px;
+}
+
+#content #buttom_content #b_center #camera_system_change {
+    width: 460px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: 5px;
+    margin-bottom: 5px;
+}
+
+#content #buttom_content #b_center #camera_system_change button {
+    width: 120px;
+    height: 40px;
+    font-size: large;
+    border: none;
+    border-radius: 3px;
+}
+
+#content #buttom_content #b_center #camera_system_change button:nth-child(1) {
+    background-color: green;
+}
+
+#content #buttom_content #b_center #camera_system_paramters {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 460px;
+    height: 180px;
+}
+
+#content #buttom_content #b_center #camera_system_paramters .param_item {
+    width: 140px;
+    height: 180px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#content #buttom_content #b_center #camera_system_paramters .param_item h4 {
+    width: 140px;
+    text-align: center;
+}
+
+#content #buttom_content #b_center #camera_system_paramters .param_item .param_item_content input {
+    display: inline;
+    width: 65px;
+}
+
+
+#content #buttom_content #b_right {
+    width: 395px;
+    height: 234px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#content #buttom_content #b_right #device_status {
+    margin-left: 10px;
+    width: 385px;
+}
+
+
+#content #buttom_content #b_right .status_item {
+    width: 180px;
+    height: 80px;
+}
+
+#content #buttom_content #b_right .status_item .status_show {
+    display: inline-block;
+    width: 180px;
+    height: 40px;
+    color: green;
+    font-weight: 800;
+    font-family: 'Arial Narrow Bold';
+    font-size: 30px;
+    text-align: center;
+}
+
+.r_top {
+    display: flex;
+    /* 启用Flexbox布局 */
+ 
+    justify-content: flex-start;
+    /*
+   
+}
+.r_top > div, .r_top>button {
+    flex: 1; /* 每个子元素占据相同的空间 */
+}
+
+/* 选择框样式 */
+#peifang_options {
+    width: 180px;
+    /* 选择框宽度为50% */
+    margin-right: 10px;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';img-src 'self' data: base64; connect-src 'self' ws://localhost:9999; style-src 'self' 'unsafe-inline'; child-src 'none';"/>
+    <title>焊锡机对位系统</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div id="content">
+      <div id="top_content">
+        <ul>
+          <li id="frame0"></li>
+          <li id="frame1"></li>
+          <li id="locateCamera1_pic1"></li>
+          <li id="locateCamera1_pic2"></li>
+          <li id="locateCamera2_pic1"></li>
+          <li id="locateCamera2_pic2"></li>
+        </ul>
+      </div>
+
+      <div id="buttom_content">
+        <div id="b_left">
+            <ul>
+              <li><button type="button" id="startDetect">开始运行</button></li>
+              <li><button type="button" id="styleDesign">模板设置</button></li>
+              <li><button type="button" id="log">运行日志</button></li>
+              <li><button type="button" id="feedCalibrate">进料标定</button></li>
+              <li><button type="button" id="cameraSetting">相机设置</button></li>
+              <li><button type="button" id="systemSetting">系统设置</button></li>
+            </ul>
+        </div>
+
+        <div id="b_center">
+            <div id="camera_system_change">
+                <button type="button" id="feedCameraBtn">进料相机</button>
+                <button type="button" id="locateCameraBtn1">对位相机&nbsp;1</button>
+                <button type="button" id="locateCameraBtn2">对位相机&nbsp;2</button>
+            </div>
+
+            <div id="camera_system_paramters">
+                <div class="param_item">
+                    <h4>精度要求</h4>
+                    <div class="param_item_content">&nbsp;&nbsp;<span>X</span>&nbsp;&nbsp;<input type="text" value="0.1000">&nbsp;<span>mm</span></div>
+                    <div class="param_item_content">&nbsp;&nbsp;<span>Y</span>&nbsp;&nbsp;<input type="text" value="0.2000">&nbsp;<span>mm</span></div>
+                    <div class="param_item_content">&nbsp;&nbsp;<span>θ</span>&nbsp;&nbsp;<input type="text" value="0.2500">&nbsp;<span>度</span></div>
+                </div>
+                <div class="param_item">
+                    <h4>对位精度</h4>
+                    <div class="param_item_content">&nbsp;&nbsp;<span>共</span>&nbsp;<input type="text" value="0.1000">&nbsp;<span>次</span></div>
+                    <div class="param_item_content">&nbsp;&nbsp;<span>X</span>&nbsp;&nbsp;<input type="text" value="0.1000">&nbsp;<span>mm</span></div>
+                    <div class="param_item_content">&nbsp;&nbsp;<span>Y</span>&nbsp;&nbsp;<input type="text" value="0.2000">&nbsp;<span>mm</span></div>
+                    <div class="param_item_content">&nbsp;&nbsp;<span>θ</span>&nbsp;&nbsp;<input type="text" value="0.2500">&nbsp;<span>度</span></div>
+                </div>
+                <div class="param_item">
+                    <h4>补偿值</h4>
+                    <div class="param_item_content">&nbsp;&nbsp;<span>第</span>&nbsp;<input type="text" value="0.1000">&nbsp;<span>项</span></div>
+                    <div class="param_item_content">&nbsp;&nbsp;<span>X</span>&nbsp;&nbsp;<input type="text" value="0.1000">&nbsp;<span>mm</span></div>
+                    <div class="param_item_content">&nbsp;&nbsp;<span>Y</span>&nbsp;&nbsp;<input type="text" value="0.2000">&nbsp;<span>mm</span></div>
+                    <div class="param_item_content">&nbsp;&nbsp;<span>θ</span>&nbsp;&nbsp;<input type="text" value="0.2500">&nbsp;<span>度</span></div>
+                </div>
+            </div>
+        </div>
+          
+        <div id="b_right">
+
+            <div class="r_top">
+                <div id="current_pefang">
+                    <label for="options">配方</label>
+                    <select id="peifang_options" name="options" >
+                        <option value="option1">选项 1</option>
+                        <option value="option2">选项 2</option>
+                        <option value="option3">选项 3</option>
+                        <option value="option4">选项 4</option>
+                    </select>
+                </div>
+                <button id="refesh_peifang">刷新配方列表</button>
+            </div>
+            <h3 id="device_status">设备状态</h3>
+            
+            
+            <div id="port_status" class="status_item">
+                <span>通讯状态：</span>
+                <br>
+                <span class="status_show">正常</span>
+            </div>
+            <div id="feedCamera_status" class="status_item">
+                <span>进料相机：</span>
+                <br>
+                <span class="status_show">正常</span>
+            </div>
+            <div id="locateCamera_status1" class="status_item">
+                <span>对位相机1：</span>
+                <br>
+                <span class="status_show">正常</span>
+            </div>
+            <div id="locateCamera_status2" class="status_item">
+                <span>对位相机2：</span>
+                <br>
+                <span class="status_show">正常</span>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="./render.js"></script>
+</body>
+  
+
+</html>
